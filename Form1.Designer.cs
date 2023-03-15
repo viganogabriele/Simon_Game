@@ -41,6 +41,7 @@
             // 
             // picG
             // 
+            this.picG.BackColor = System.Drawing.Color.Green;
             this.picG.Location = new System.Drawing.Point(256, 124);
             this.picG.Name = "picG";
             this.picG.Size = new System.Drawing.Size(100, 50);
@@ -49,6 +50,7 @@
             // 
             // picR
             // 
+            this.picR.BackColor = System.Drawing.Color.Red;
             this.picR.Location = new System.Drawing.Point(408, 124);
             this.picR.Name = "picR";
             this.picR.Size = new System.Drawing.Size(100, 50);
@@ -57,6 +59,7 @@
             // 
             // picY
             // 
+            this.picY.BackColor = System.Drawing.Color.Yellow;
             this.picY.Location = new System.Drawing.Point(256, 215);
             this.picY.Name = "picY";
             this.picY.Size = new System.Drawing.Size(100, 50);
@@ -65,6 +68,7 @@
             // 
             // picB
             // 
+            this.picB.BackColor = System.Drawing.Color.Blue;
             this.picB.Location = new System.Drawing.Point(408, 215);
             this.picB.Name = "picB";
             this.picB.Size = new System.Drawing.Size(100, 50);
@@ -73,9 +77,10 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(346, 317);
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(329, 317);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.Size = new System.Drawing.Size(90, 28);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;

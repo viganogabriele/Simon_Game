@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SimonGame
 {
@@ -48,34 +49,21 @@ namespace SimonGame
                 //System.Threading.Thread.Sleep(500);
                 foreach (int tasto in sequenza)
                 {
-
                     switch (tasto)
                     {
                         case 0:
                             picR.BackColor = Color.Cyan;
-                            System.Threading.Thread.Sleep(1000);
-                            picR.BackColor = Color.Red;
                             break;
                         case 1:
-
                             picB.BackColor = Color.Fuchsia;
-                            System.Threading.Thread.Sleep(1000);
-                            picB.BackColor = Color.Blue;
                             break;
                         case 2:
-
                             picY.BackColor = Color.Orange;
-                            System.Threading.Thread.Sleep(1000);
-                            picY.BackColor = Color.Yellow;
                             break;
                         case 3:
                             picG.BackColor = Color.Lime;
-                            System.Threading.Thread.Sleep(1000);
-                            picG.BackColor = Color.Green;
                             break;
                     }
-                    System.Threading.Thread.Sleep(1000);
-
                 }
                 inStampa = false;
             }
