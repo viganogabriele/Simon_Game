@@ -19,7 +19,7 @@ namespace SimonGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //Ciao
+            //Ciao a tutti
         }
     }
 }
