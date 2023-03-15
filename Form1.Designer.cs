@@ -28,56 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picG = new System.Windows.Forms.PictureBox();
+            this.picR = new System.Windows.Forms.PictureBox();
+            this.picY = new System.Windows.Forms.PictureBox();
+            this.picB = new System.Windows.Forms.PictureBox();
             this.btnStart = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picG
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(274, 136);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picG.Location = new System.Drawing.Point(256, 124);
+            this.picG.Name = "picG";
+            this.picG.Size = new System.Drawing.Size(100, 50);
+            this.picG.TabIndex = 0;
+            this.picG.TabStop = false;
             // 
-            // pictureBox2
+            // picR
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(437, 136);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.picR.Location = new System.Drawing.Point(408, 124);
+            this.picR.Name = "picR";
+            this.picR.Size = new System.Drawing.Size(100, 50);
+            this.picR.TabIndex = 1;
+            this.picR.TabStop = false;
             // 
-            // pictureBox3
+            // picY
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(274, 217);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.picY.Location = new System.Drawing.Point(256, 215);
+            this.picY.Name = "picY";
+            this.picY.Size = new System.Drawing.Size(100, 50);
+            this.picY.TabIndex = 2;
+            this.picY.TabStop = false;
             // 
-            // pictureBox4
+            // picB
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(437, 217);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.picB.Location = new System.Drawing.Point(408, 215);
+            this.picB.Name = "picB";
+            this.picB.Size = new System.Drawing.Size(100, 50);
+            this.picB.TabIndex = 3;
+            this.picB.TabStop = false;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(377, 321);
+            this.btnStart.Location = new System.Drawing.Point(346, 317);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 4;
-            this.btnStart.Text = "button1";
+            this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -87,26 +87,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picB);
+            this.Controls.Add(this.picY);
+            this.Controls.Add(this.picR);
+            this.Controls.Add(this.picG);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picG;
+        private System.Windows.Forms.PictureBox picR;
+        private System.Windows.Forms.PictureBox picY;
+        private System.Windows.Forms.PictureBox picB;
         private System.Windows.Forms.Button btnStart;
     }
 }
