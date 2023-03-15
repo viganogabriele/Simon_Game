@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picG = new System.Windows.Forms.PictureBox();
             this.picR = new System.Windows.Forms.PictureBox();
             this.picY = new System.Windows.Forms.PictureBox();
             this.picB = new System.Windows.Forms.PictureBox();
             this.btnStart = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picY)).BeginInit();
@@ -86,6 +88,12 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 2000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +121,7 @@
         private System.Windows.Forms.PictureBox picY;
         private System.Windows.Forms.PictureBox picB;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
