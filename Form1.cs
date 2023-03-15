@@ -80,6 +80,7 @@ namespace SimonGame
         private void StampaProssimoElemento()
         {
             SbiancaTasti();
+            Thread.Sleep(1000);
             ColoraTasto(sequenza[contatore]);
         }
 
@@ -127,20 +128,22 @@ namespace SimonGame
                             break;
                         case 2:
                             picY.BackColor = Color.Orange;
-                            System.Threading.Thread.Sleep(2000);
+                            Thread.Sleep(2000);
                             break;
                         case 3:
                             picG.BackColor = Color.Lime;
-                            System.Threading.Thread.Sleep(2000);
+                            Thread.Sleep(2000);
                             break;
                     }
                 }
                 inStampa = false;
             }
         }
-        async void foo()
+
+
+        //Copiato da StackOverFlow
+       async void foo()
         {
-            // something
             await Task.Delay(2000);
         }
         */
