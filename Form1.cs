@@ -13,7 +13,8 @@ namespace SimonGame
         }
 
         List<int> sequenza = new List<int>();
-        int contatore = 0;
+        int contInserisci = 0;
+        int contStampa = 0;
         Random random = new Random();
 
         bool inStampa = false;
@@ -21,12 +22,15 @@ namespace SimonGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            /*
             sequenza.Add(0);
             sequenza.Add(1);
             sequenza.Add(2);
             sequenza.Add(3);
             sequenza.Add(3);
-            //AllungaSequenza(sequenza); Da mettere dopo aver tolto la sequenza di prova
+            */
+            
+            AllungaSequenza(sequenza);
             InizioStampa(sequenza);
         }
 
