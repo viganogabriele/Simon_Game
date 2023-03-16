@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace SimonGame
 {
@@ -21,7 +15,9 @@ namespace SimonGame
         List<int> sequenza = new List<int>();
         int contatore = 0;
         Random random = new Random();
+
         bool inStampa = false;
+        bool tastoAcceso = false;
 
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -46,42 +42,49 @@ namespace SimonGame
         }
 
 
-// Versione con timer, sbianca tutti i tasti e colora il nuovo tasto allo stesso tempo. Non riusciamo a mettere 
-// un tempo distop con sleep tra lo sbiancamento e il colorare
+        // Versione con timer, sbianca tutti i tasti e colora il nuovo tasto allo stesso tempo. Non riusciamo a mettere 
+        // un tempo distop con sleep tra lo sbiancamento e il colorare
 
         private void ColoraTasto(int tasto)
         {
             if (tasto == 0)
             {
-                picR.BackColor = Color.Cyan;
+                picR.BackColor = Color.Red;
+                EmettiSuono(310);
             }
             else if (tasto == 1)
             {
-                picB.BackColor = Color.Fuchsia;
+                picB.BackColor = Color.Blue;
+                EmettiSuono(209);
             }
             else if (tasto == 2)
             {
-                picY.BackColor = Color.Orange;
+                picY.BackColor = Color.Yellow;
+                EmettiSuono(252);
             }
             else if (tasto == 3)
             {
-                picG.BackColor = Color.Lime;
+                picG.BackColor = Color.Green;
+                EmettiSuono(415);
             }
 
+            tastoAcceso = true;
+
+        }
+
+        private void EmettiSuono(int freq)
+        {
+            System.Threading.Tasks.Task.Run(() => Console.Beep(freq, timer.Interval));
         }
 
         private void SbiancaTasti()
         {
-            picR.BackColor = Color.Red;
-            picB.BackColor = Color.Blue;
-            picY.BackColor = Color.Yellow;
-            picG.BackColor = Color.Green;
-        }
-        private void StampaProssimoElemento()
-        {
-            SbiancaTasti();
-            Thread.Sleep(1000);
-            ColoraTasto(sequenza[contatore]);
+            picR.BackColor = Color.DarkGray;
+            picB.BackColor = Color.DarkGray;
+            picY.BackColor = Color.DarkGray;
+            picG.BackColor = Color.DarkGray;
+
+            tastoAcceso = false;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -96,8 +99,15 @@ namespace SimonGame
                 }
                 else
                 {
-                    StampaProssimoElemento();
-                    contatore++;
+                    if (tastoAcceso)
+                    {
+                        SbiancaTasti();
+                    }
+                    else
+                    {
+                        ColoraTasto(sequenza[contatore]);
+                        contatore++;
+                    }
                 }
             }
             else
@@ -107,45 +117,5 @@ namespace SimonGame
         }
 
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------
- /* Versione senza Timer non funzionante: I tempi con gli sleep si sommano e dopo quel tempo stampa tutto insieme
-        
-        
-        void Stampa()
-        {
-            if (inStampa == true)
-            {
-                foreach (int tasto in sequenza)
-                {
-                    switch (tasto)
-                    {
-                        case 0:
-                            picR.BackColor = Color.Cyan;
-                            foo();
-                            break;
-                        case 1:
-                            picB.BackColor = Color.Fuchsia;
-                            break;
-                        case 2:
-                            picY.BackColor = Color.Orange;
-                            Thread.Sleep(2000);
-                            break;
-                        case 3:
-                            picG.BackColor = Color.Lime;
-                            Thread.Sleep(2000);
-                            break;
-                    }
-                }
-                inStampa = false;
-            }
-        }
-
-
-        //Copiato da StackOverFlow
-       async void foo()
-        {
-            await Task.Delay(2000);
-        }
-        */
     }
 }

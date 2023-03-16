@@ -43,7 +43,8 @@
             // 
             // picG
             // 
-            this.picG.BackColor = System.Drawing.Color.Green;
+            this.picG.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.picG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picG.Location = new System.Drawing.Point(256, 124);
             this.picG.Name = "picG";
             this.picG.Size = new System.Drawing.Size(100, 50);
@@ -52,7 +53,8 @@
             // 
             // picR
             // 
-            this.picR.BackColor = System.Drawing.Color.Red;
+            this.picR.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.picR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picR.Location = new System.Drawing.Point(408, 124);
             this.picR.Name = "picR";
             this.picR.Size = new System.Drawing.Size(100, 50);
@@ -61,7 +63,8 @@
             // 
             // picY
             // 
-            this.picY.BackColor = System.Drawing.Color.Yellow;
+            this.picY.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.picY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picY.Location = new System.Drawing.Point(256, 215);
             this.picY.Name = "picY";
             this.picY.Size = new System.Drawing.Size(100, 50);
@@ -70,7 +73,8 @@
             // 
             // picB
             // 
-            this.picB.BackColor = System.Drawing.Color.Blue;
+            this.picB.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.picB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picB.Location = new System.Drawing.Point(408, 215);
             this.picB.Name = "picB";
             this.picB.Size = new System.Drawing.Size(100, 50);
