@@ -15,6 +15,7 @@ namespace SimonGame
         List<int> sequenza = new List<int>();
         int contInserisci = 0;
         int contStampa = 0;
+        int score = 0;
         Random random = new Random();
 
         bool inStampa = false;
@@ -29,7 +30,7 @@ namespace SimonGame
             sequenza.Add(3);
             sequenza.Add(3);
             */
-            
+            lblGameOver.Visible = false;
             AllungaSequenza(sequenza);
             InizioStampa(sequenza);
         }
@@ -42,12 +43,7 @@ namespace SimonGame
         void InizioStampa(List<int> sequenza)
         {
             inStampa = true;
-            //Stampa(); Da attivare per versione senza timer
         }
-
-
-        // Versione con timer, sbianca tutti i tasti e colora il nuovo tasto allo stesso tempo. Non riusciamo a mettere 
-        // un tempo distop con sleep tra lo sbiancamento e il colorare
 
         private void ColoraTasto(int tasto)
         {
@@ -95,9 +91,10 @@ namespace SimonGame
         {
             if (inStampa == true)
             {
-                if (contatore == sequenza.Count)
+                if (contStampa == sequenza.Count)
                 {
-                    contatore = 0;
+                    contStampa = 0;
+                    contInserisci = 0;
                     inStampa = false;
                     SbiancaTasti();
                 }
@@ -109,17 +106,126 @@ namespace SimonGame
                     }
                     else
                     {
-                        ColoraTasto(sequenza[contatore]);
-                        contatore++;
+                        ColoraTasto(sequenza[contStampa]);
+                        contStampa++;
                     }
                 }
             }
             else
             {
-                // In gioco
+                if (tastoAcceso)
+                {
+                    SbiancaTasti();
+                }
             }
         }
 
+        private void picR_Click(object sender, EventArgs e)
+        {
+            if (inStampa == false)
+            {
+                ColoraTasto(0);
+                if (sequenza[contInserisci] == 0 || contInserisci == sequenza.Count)
+                {
+                    AllungaSequenza(sequenza);
+                    contInserisci = 0;
+                    score++;
+                    lblScore.Text = score.ToString();
+                }
+                else if (sequenza[contInserisci] == 0)
+                {
+                    contInserisci++;
+                }
+                else
+                {
+                    lblGameOver.Visible = true;
+                    contInserisci = 0;
+                    contStampa = 0;
+                    sequenza.Clear();
+                }
+                tastoAcceso = true;
+            }
+        }
 
+        private void picB_Click(object sender, EventArgs e)
+        {
+            if (inStampa == false)
+            {
+                ColoraTasto(1);
+                if (sequenza[contInserisci] == 1 || contInserisci == sequenza.Count)
+                {
+                    AllungaSequenza(sequenza);
+                    contInserisci = 0;
+                    score++;
+                    lblScore.Text = score.ToString();
+                }
+                else if (sequenza[contInserisci] == 1)
+                {
+                    contInserisci++;
+                }
+                else
+                {
+                    lblGameOver.Visible = true;
+                    contInserisci = 0;
+                    contStampa = 0;
+                    sequenza.Clear();
+                }
+                tastoAcceso = true;
+            }
+        }
+
+        private void picY_Click(object sender, EventArgs e)
+        {
+            if (inStampa == false)
+            {
+                ColoraTasto(2);
+                if (sequenza[contInserisci] == 2 || contInserisci == sequenza.Count)
+                {
+                    AllungaSequenza(sequenza);
+                    contInserisci = 0;
+                    score++;
+                    lblScore.Text = score.ToString();
+                }
+                else if (sequenza[contInserisci] == 2)
+                {
+                    contInserisci++;
+                }
+                else
+                {
+                    lblGameOver.Visible = true;
+                    contInserisci = 0;
+                    contStampa = 0;
+                    sequenza.Clear();
+                }
+                tastoAcceso = true;
+            }
+        }
+
+        private void picG_Click(object sender, EventArgs e)
+        {
+            if (inStampa == false)
+            {
+                ColoraTasto(3);
+                if (sequenza[contInserisci] == 3 || contInserisci == sequenza.Count)
+                {
+                    AllungaSequenza(sequenza);
+                    contInserisci = 0;
+                    score++;
+                    lblScore.Text = score.ToString();
+                }
+                else if (sequenza[contInserisci] == 3)
+                {
+                    contInserisci++;
+                }
+                else
+                {
+                    lblGameOver.Visible = true;
+                    contInserisci = 0;
+                    contStampa = 0;
+                    sequenza.Clear();
+                }
+                tastoAcceso = true;
+            }
+        }
     }
 }
