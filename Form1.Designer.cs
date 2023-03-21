@@ -37,7 +37,6 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblGameOver = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.lblRecord = new System.Windows.Forms.Label();
             this.lblSimon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picR)).BeginInit();
@@ -128,15 +127,6 @@
             this.lblScore.TabIndex = 6;
             this.lblScore.Text = "Score: ";
             // 
-            // lblRecord
-            // 
-            this.lblRecord.AutoSize = true;
-            this.lblRecord.Location = new System.Drawing.Point(691, 373);
-            this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(48, 13);
-            this.lblRecord.TabIndex = 7;
-            this.lblRecord.Text = "Record: ";
-            // 
             // lblSimon
             // 
             this.lblSimon.AutoSize = true;
@@ -154,7 +144,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblSimon);
-            this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.btnStart);
@@ -183,7 +172,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Label lblRecord;
         private System.Windows.Forms.Label lblSimon;
     }
 }

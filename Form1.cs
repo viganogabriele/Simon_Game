@@ -128,7 +128,7 @@ namespace SimonGame
                     contInserisci = 0;
                     contStampa = 0;
                     score++;
-                    lblScore.Text = score.ToString();
+                    lblScore.Text = "Score: " + score.ToString();
                     InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 0)
@@ -155,7 +155,7 @@ namespace SimonGame
                     contInserisci = 0;
                     contStampa = 0;
                     score++;
-                    lblScore.Text = score.ToString();
+                    lblScore.Text = "Score: " + score.ToString();
                     InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 1)
@@ -182,7 +182,7 @@ namespace SimonGame
                     contInserisci = 0;
                     contStampa = 0;
                     score++;
-                    lblScore.Text = score.ToString();
+                    lblScore.Text = "Score: " + score.ToString();
                     InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 2)
@@ -209,7 +209,7 @@ namespace SimonGame
                     contInserisci = 0;
                     contStampa = 0;
                     score++;
-                    lblScore.Text = score.ToString();
+                    lblScore.Text = "Score: " + score.ToString();
                     InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 3)
