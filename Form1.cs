@@ -23,16 +23,11 @@ namespace SimonGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            /*
-            sequenza.Add(0);
-            sequenza.Add(1);
-            sequenza.Add(2);
-            sequenza.Add(3);
-            sequenza.Add(3);
-            */
             lblGameOver.Visible = false;
+            sequenza.Clear();
+            score = 0;
             AllungaSequenza(sequenza);
-            InizioStampa(sequenza);
+            InizioStampa();
         }
 
         void AllungaSequenza(List<int> sequenza)
@@ -40,7 +35,7 @@ namespace SimonGame
             sequenza.Add(random.Next(4));
         }
 
-        void InizioStampa(List<int> sequenza)
+        void InizioStampa()
         {
             inStampa = true;
         }
@@ -129,8 +124,10 @@ namespace SimonGame
                 {
                     AllungaSequenza(sequenza);
                     contInserisci = 0;
+                    contStampa = 0;
                     score++;
                     lblScore.Text = score.ToString();
+                    InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 0)
                 {
@@ -141,6 +138,7 @@ namespace SimonGame
                     lblGameOver.Visible = true;
                     contInserisci = 0;
                     contStampa = 0;
+                    score = 0;
                     sequenza.Clear();
                 }
                 tastoAcceso = true;
@@ -156,8 +154,10 @@ namespace SimonGame
                 {
                     AllungaSequenza(sequenza);
                     contInserisci = 0;
+                    contStampa = 0;
                     score++;
                     lblScore.Text = score.ToString();
+                    InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 1)
                 {
@@ -168,6 +168,7 @@ namespace SimonGame
                     lblGameOver.Visible = true;
                     contInserisci = 0;
                     contStampa = 0;
+                    score = 0;
                     sequenza.Clear();
                 }
                 tastoAcceso = true;
@@ -183,8 +184,10 @@ namespace SimonGame
                 {
                     AllungaSequenza(sequenza);
                     contInserisci = 0;
+                    contStampa = 0;
                     score++;
                     lblScore.Text = score.ToString();
+                    InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 2)
                 {
@@ -195,6 +198,7 @@ namespace SimonGame
                     lblGameOver.Visible = true;
                     contInserisci = 0;
                     contStampa = 0;
+                    score = 0;
                     sequenza.Clear();
                 }
                 tastoAcceso = true;
@@ -210,8 +214,10 @@ namespace SimonGame
                 {
                     AllungaSequenza(sequenza);
                     contInserisci = 0;
+                    contStampa = 0;
                     score++;
                     lblScore.Text = score.ToString();
+                    InizioStampa();
                 }
                 else if (sequenza[contInserisci] == 3)
                 {
@@ -222,6 +228,7 @@ namespace SimonGame
                     lblGameOver.Visible = true;
                     contInserisci = 0;
                     contStampa = 0;
+                    score = 0;
                     sequenza.Clear();
                 }
                 tastoAcceso = true;
