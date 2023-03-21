@@ -110,9 +110,14 @@ namespace SimonGame
             }
             else
             {
-                if (tastoAcceso)
+                if (tastoAcceso && contSbianca == 1)
                 {
                     SbiancaTasti();
+                    contSbianca = 0;
+                }
+                else
+                {
+                    contSbianca++;
                 }
             }
         }
