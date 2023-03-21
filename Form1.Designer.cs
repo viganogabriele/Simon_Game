@@ -37,6 +37,8 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblGameOver = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
+            this.lblRecord = new System.Windows.Forms.Label();
+            this.lblSimon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picY)).BeginInit();
@@ -107,10 +109,12 @@
             // lblGameOver
             // 
             this.lblGameOver.AutoSize = true;
-            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameOver.Location = new System.Drawing.Point(246, 29);
+            this.lblGameOver.BackColor = System.Drawing.Color.Black;
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.ForeColor = System.Drawing.Color.Red;
+            this.lblGameOver.Location = new System.Drawing.Point(205, 154);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(281, 55);
+            this.lblGameOver.Size = new System.Drawing.Size(372, 73);
             this.lblGameOver.TabIndex = 5;
             this.lblGameOver.Text = "Game Over";
             this.lblGameOver.Visible = false;
@@ -118,17 +122,39 @@
             // lblScore
             // 
             this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(645, 386);
+            this.lblScore.Location = new System.Drawing.Point(691, 398);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(41, 13);
             this.lblScore.TabIndex = 6;
             this.lblScore.Text = "Score: ";
+            // 
+            // lblRecord
+            // 
+            this.lblRecord.AutoSize = true;
+            this.lblRecord.Location = new System.Drawing.Point(691, 373);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(48, 13);
+            this.lblRecord.TabIndex = 7;
+            this.lblRecord.Text = "Record: ";
+            // 
+            // lblSimon
+            // 
+            this.lblSimon.AutoSize = true;
+            this.lblSimon.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSimon.ForeColor = System.Drawing.Color.Black;
+            this.lblSimon.Location = new System.Drawing.Point(225, 22);
+            this.lblSimon.Name = "lblSimon";
+            this.lblSimon.Size = new System.Drawing.Size(314, 55);
+            this.lblSimon.TabIndex = 8;
+            this.lblSimon.Text = "Simon Game";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSimon);
+            this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.btnStart);
@@ -157,6 +183,8 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblRecord;
+        private System.Windows.Forms.Label lblSimon;
     }
 }
 
